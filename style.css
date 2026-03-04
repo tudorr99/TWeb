@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    scroll-behavior: smooth; /* scroll animat */
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    padding: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.header h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+/* animație titlu */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* MENU */
+
+.menu {
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* pseudo-clase */
+.menu a:link { color: lightblue; }
+.menu a:visited { color: violet; }
+.menu a:hover { 
+    color: yellow; 
+    font-size: 18px; 
+}
+.menu a:active { color: red; }
+
+/* CONTENT */
+
+.content {
+    margin-top: 25px;
+}
+
+.section {
+    background-color: rgba(0,0,0,0.3);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+/* efect hover pe secțiuni */
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px black;
+}
+
+.section h2 {
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+.section img {
+    width: 300px;
+    display: block;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px black;
+    transition: transform 0.4s;
+}
+
+/* zoom imagine */
+.section img:hover {
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* BUTON BACK TO TOP */
+
+.top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: yellow;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.top-button:hover {
+    background-color: orange;
+}
