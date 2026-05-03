@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rețele Neurale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Rețele Neurale Artificiale</h1>
+</div>
+
+<div class="menu">
+    <a href="index.html">Home</a>
+    <a href="intro.html">Introducere</a>
+    <a href="tipuri.html">Tipuri</a>
+    <a href="functionare.html">Funcționare</a>
+    <a href="aplicatii.html">Aplicații</a>
+</div>
+
+<div class="container">
+
+    <h2>Completează formularul</h2>
+
+    <!-- Formular trimis la server via CGI (POST) -->
+    <form id="formular" action="cgi-bin/formular.py" method="POST" novalidate>
+
+        <label for="nume">Nume:</label><br>
+        <input type="text" id="nume" name="nume" placeholder="ex: Ion Popescu" required minlength="3"><br>
+        <span class="eroare" id="err-nume"></span><br>
+
+        <label for="varsta">Vârstă:</label><br>
+        <input type="number" id="varsta" name="varsta" placeholder="ex: 22" required min="10" max="100"><br>
+        <span class="eroare" id="err-varsta"></span><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="ex: ion@email.com" required><br>
+        <span class="eroare" id="err-email"></span><br>
+
+        <button type="submit">Trimite</button>
+    </form>
+
+    <p id="raspuns"></p>
+    <button id="toggleTheme">🌙 Dark Mode</button>
+    <button id="resetData">🗑 Șterge datele</button>
+
+    <div id="loader" style="display:none; margin-top:20px;">
+        ⏳ Se procesează...
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

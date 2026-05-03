@@ -1,0 +1,185 @@
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #eef2f7, #d9e4f5);
+    animation: fadeIn 1s ease-in;
+}
+
+/* ANIMAȚIE GENERALĂ */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(90deg, #2c3e50, #4ca1af);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* MENIU */
+.menu {
+    background: #34495e;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.menu a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* efect underline animat */
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #00d2ff;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu a:hover {
+    color: #00d2ff;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    animation: slideUp 0.8s ease;
+}
+
+/* slide animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* IMAGINI */
+img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 20px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* BUTON BACK */
+.back {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back:hover {
+    color: #1abc9c;
+}
+
+/* FORM */
+form {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* INPUT */
+input {
+    padding: 10px;
+    width: 220px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52,152,219,0.5);
+}
+
+/* BUTTON */
+button {
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #27ae60, #2ecc71);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+/* DARK MODE */
+.dark {
+    background: #121212;
+    color: #f1f1f1;
+}
+
+.dark .container {
+    background: #1e1e1e;
+}
+
+.dark .header {
+    background: linear-gradient(90deg, #000000, #434343);
+}
+
+.dark .menu {
+    background: #222;
+}
+
+.dark input {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* LOADER ANIMAȚIE */
+#loader {
+    font-weight: bold;
+    color: #3498db;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {opacity: 0.3;}
+    50% {opacity: 1;}
+    100% {opacity: 0.3;}
+}
